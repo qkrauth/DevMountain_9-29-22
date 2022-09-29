@@ -17,7 +17,19 @@
 // 1
 
 ////////// CODE HERE //////////
+////////// GOOGLE ANSWER //////////
 
-function printDigits(num) {
-    
+const printDigits = (num) => {
+    let numRev = 0;
+    let rem = 0;
+
+    while (num > 0) {
+        numRev *= 10
+        rem = num % 10
+        num = (num - rem) / 10
+
+        numRev += rem
+    }
+    return numRev;
 }
+console.log(printDigits(23849));
